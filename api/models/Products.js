@@ -11,7 +11,6 @@ module.exports = {
 
     product: {
       type: "string",
-      required: true,
       unique: true
     },
     prizes: {
@@ -21,6 +20,15 @@ module.exports = {
     description: {
       type: "string",
     },
+
+    uid:{
+      type: 'integer'
+    },
+
+     //add reference to user
+     owner: {
+      model: 'users'
+    }
 
   }
 };

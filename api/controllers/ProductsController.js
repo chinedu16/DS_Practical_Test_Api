@@ -4,7 +4,6 @@
  * @description :: Server-side logic for managing orders
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-var jwt = require('jsonwebtoken')
 module.exports = {
 
     getproduct: function (req, res) {   

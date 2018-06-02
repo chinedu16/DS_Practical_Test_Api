@@ -9,20 +9,25 @@ var bcrypt = require("bcrypt")
 module.exports = {
   
   attributes: {
+
       username: {
         type: "string",
         required: true,
         unique: true
       },
+      
       name: {
         type: "string",
       },
+
       email: {
         type: "string",
       },
+
       phone: {
         type: "string",
       },
+
       password:{
       type: "string",
       minLength: 6,
@@ -30,7 +35,13 @@ module.exports = {
       required: true,
       unique: true,
       columnName: "encryptedPassword"
-    } 
+    },
+
+    //add reference to orders
+    orders:{
+      collection: 'orders',
+      via: 'owner'
+    }
   },
   
   customToJSON: function() {

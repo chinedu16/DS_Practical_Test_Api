@@ -13,7 +13,16 @@ module.exports = {
     },
     overall:{
       type: 'array'
+    },
+    
+
+    //add reference to user
+    owner: {
+      model: 'users'
     }
+
+   
   }
 };
+
 

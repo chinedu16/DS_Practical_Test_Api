@@ -5,7 +5,7 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-var jwt = require('jsonwebtoken')
+var _ = require('lodash');
 
 
 module.exports = {
@@ -15,17 +15,19 @@ module.exports = {
         var newUser = {
           username: req.body.username,
           password: req.body.password,
-          name: req.body.password,
-          email: req.body.password,
-          phone: req.body.password
+          name: req.body.name,
+          email: req.body.email,
+          phone: req.body.phone
         };
             
-        Users.create(newUser).exec(function (err, user) {
+        Users.create(newUser).exec(function (err, newUser) {
                 if (err) {
                   return res.json(err.status, {err: err});
                 }
-                if (user) {
-                  res.json(200, {user: user, token: jwt.sign({id: user.id}, 'secret' , {expiresIn:'1h'})});
+                if (newUser) {
+                  return res.json({
+                    token: jwtServices.issue({id: newUser.id})
+                });
                 }
         });
       },

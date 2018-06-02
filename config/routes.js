@@ -54,6 +54,8 @@ module.exports.routes = {
  'POST /products': 'ProductsController.getproduct',
  'PUT /products': 'ProcreateController.createproduct',
 
- 'post /orders': 'OrdersController.createOrders'
+ 'get /orders': 'OrdersController.allorder',
+ 'post /orders': 'OrdersController.neworder',
+ 'post /users/orders': 'UserController.newhobby',
 
 };

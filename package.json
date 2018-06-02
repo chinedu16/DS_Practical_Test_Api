@@ -8,11 +8,13 @@
     "ejs": "^2.6.1",
     "express-react-views": "^0.10.5",
     "include-all": "~0.1.6",
+    "machinepack-mailgun": "^0.6.0",
     "rc": "1.0.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "sails": "~0.12.0",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "twilio": "^3.17.1"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -24,5 +26,6 @@
     "url": "git://github.com/anonymous node/sails user/sampleapi.git"
   },
   "author": "anonymous node/sails user",
-  "license": ""
+  "license": "ISC",
+  "devDependencies": {}
 }
