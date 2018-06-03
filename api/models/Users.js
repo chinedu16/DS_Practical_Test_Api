@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-var bcrypt = require("bcrypt")
+var bcrypt = require("bcrypt");
 module.exports = {
   
   attributes: {
@@ -45,7 +45,7 @@ module.exports = {
   },
   
   customToJSON: function() {
-    return _.omit(this, ['password', 'ssn'])
+    return _.omit(this, ['password', 'ssn']);
   },
 
   beforeCreate: function(users, cb){

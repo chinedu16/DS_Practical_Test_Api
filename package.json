@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "ejs": "^2.6.1",
     "express-react-views": "^0.10.5",
     "grunt": "^1.0.2",
