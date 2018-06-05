@@ -8,6 +8,9 @@
 var bcrypt = require("bcrypt");
 module.exports = {
   
+
+connection: 'mysqlServer',
+
   attributes: {
 
     createdAt: false,

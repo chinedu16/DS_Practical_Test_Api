@@ -41,6 +41,7 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   mysqlServer: {
+    
     adapter: 'sails-mysql',
     host: 'us-cdbr-iron-east-04.cleardb.net',
     user: 'b1acf2e4a17de6', //optional
