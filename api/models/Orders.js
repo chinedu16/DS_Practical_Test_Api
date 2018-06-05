@@ -8,14 +8,13 @@
 module.exports = {
 
   attributes: {
-    order: {
+    ordername: {
       type: 'string',
     },
     overall:{
       type: 'array'
     },
     
-
     //add reference to user
     owner: {
       model: 'users'

@@ -10,6 +10,8 @@ module.exports = {
   
   attributes: {
 
+    createdAt: false,
+    updatedAt: false,
       username: {
         type: "string",
         required: true,
@@ -34,7 +36,6 @@ module.exports = {
       protected: true,
       required: true,
       unique: true,
-      columnName: "encryptedPassword"
     },
 
     //add reference to orders

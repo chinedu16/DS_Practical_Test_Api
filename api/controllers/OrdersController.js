@@ -39,8 +39,8 @@ module.exports = {
     neworder: function (req, res) {
 
         
-        var ordername = req.body.orders.order;
-        var product = req.body.orders.overall;
+        var ordername = req.body.orders.ordername;
+        var overall = req.body.orders.overall;
         var token = req.query.token;
 
         jwtServices.verify(req.query.token, function (err, decoded) {
@@ -51,11 +51,12 @@ module.exports = {
             if (decoded) {
                 Orders.create({
                     ordername: ordername,
-                    product: product,
+                    overall: overall,
                     owner: decoded.id
                 }).exec(function (err, hobby) {
                     if (err) {
-                        return res.json("Orders did not create");
+                        //return res.json({error: err});
+                        console.log(err);
                     }
                     // if(hobby){
                     //     return res.json({orders: hobby})

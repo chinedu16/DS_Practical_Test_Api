@@ -56,6 +56,6 @@ module.exports.routes = {
 
  'get /orders': 'OrdersController.allorder',
  'post /orders': 'OrdersController.neworder',
- 'post /users/orders': 'UserController.newhobby',
+ 
 
 };

@@ -10,13 +10,17 @@ module.exports = {
   
     createproduct: function (req, res) {
       
-        var newUser = {
-          product: req.body.product,
-          prizes: req.body.prizes,
-          description: req.body.description,
-        };
+       
+        var product = req.body.product;
+        var prizes = req.body.prizes;
+        var description = req.body.description;
+        
             
-        Products.create(newUser).exec(function (err, user) {
+        Products.create({
+          products: product,
+          prizes: prizes,
+          description: description
+        }).exec(function (err, user) {
                 if (err) {
                   return res.json(err.status, {err: err});
                 }

@@ -24,7 +24,7 @@
           }
           if (user) {
             return res.json({
-              found: 'Gotten nere',
+
               token: jwtServices.issue({id: user.id})
                     });
                   }

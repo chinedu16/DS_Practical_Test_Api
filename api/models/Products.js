@@ -9,9 +9,8 @@ module.exports = {
 
   attributes: {
 
-    product: {
+    products: {
       type: "string",
-      unique: true
     },
     prizes: {
       type: "integer",
@@ -19,15 +18,6 @@ module.exports = {
     },
     description: {
       type: "string",
-    },
-
-    uid:{
-      type: 'integer'
-    },
-
-     //add reference to user
-     owner: {
-      model: 'users'
     }
 
   }
